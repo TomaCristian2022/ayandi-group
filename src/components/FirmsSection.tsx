@@ -72,12 +72,12 @@ const FirmsSection: React.FC = () => {
           <img
             src={firm.logo}
             alt={`${firm.name} Logo`}
-            className="w-100 h-20 mx-auto mb-4 object-cover transform transition-transform duration-300 group-hover:scale-110"
+            className="w-100 h-40 mx-auto mb-4 object-contain transform transition-transform duration-300 group-hover:scale-110"
           />
 
           {/* Firm Details */}
           <h3 className="text-xl font-semibold text-center mb-2">{firm.name}</h3>
-          <p className="text-gray-700 text-center line-clamp-3">{firm.description}</p>
+          {/* <p className="text-gray-700 text-center line-clamp-3">{firm.description}</p> */}
 
           {/* Website Link (Hidden initially, shows on hover) */}
           <a 

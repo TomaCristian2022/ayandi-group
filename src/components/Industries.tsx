@@ -53,7 +53,6 @@ const Industries: React.FC = () => {
   const autoScroll = () => {
     const container = containerRef.current;
     if (!container) return;
-
     let scrollAmount = container.scrollLeft;
     const maxScroll = container.scrollWidth - container.clientWidth;
 
@@ -64,7 +63,7 @@ const Industries: React.FC = () => {
         setScrollDirection(1); // Change direction when reaching the start
       }
 
-      scrollAmount += scrollDirection * 1.5; // Adjust scroll speed here
+      scrollAmount += scrollDirection * 0.5; // Adjust scroll speed here
       container.scrollLeft = scrollAmount;
       animationFrameId.current = requestAnimationFrame(scroll);
     };
@@ -91,22 +90,24 @@ const Industries: React.FC = () => {
   };
 
   return (
-    <section className="bg-secondary py-20">
+    <section className="bg-secondary py-20 industries-section">
       <div className="mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12">Industries We Serve</h2>
 
         {/* Auto-Scrolling Container */}
         <div
-          className="relative overflow-x-scroll h-[400px]"
-          ref={containerRef}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          className="relative flex items-center h-[400px] industries-container"
+         
         >
-          <div className="flex space-x-6">
+          <div className="flex items-center overflow-x-scroll h-fit space-x-6 industries-containers-section"
+           ref={containerRef}
+           onMouseEnter={handleMouseEnter}
+           onMouseLeave={handleMouseLeave}
+           >
             {industries.map(industry => (
               <div 
                 key={industry.id} 
-                className="flex flex-col min-w-[800px] w-[800px] sm:flex-row items-center bg-white shadow-lg rounded-full 
+                className="flex flex-col md:min-w-[800px] w-[800px] sm:flex-row items-center bg-white shadow-lg rounded-full 
                 transition duration-500 hover:shadow-xl relative p-10"
               >
                 {/* Left Side: Text */}
@@ -116,7 +117,7 @@ const Industries: React.FC = () => {
                 </div>
                 
                 {/* Right Side: Image */}
-                <div className="sm:w-1/3 mt-0 sm:mt-0 absolute right-0">
+                <div className="sm:w-1/3 mt-0 sm:mt-0 top-0 absolute md: right-0">
                   <img 
                     src={industry.image} 
                     alt={`${industry.name} Image`} 
