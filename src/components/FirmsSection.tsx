@@ -57,7 +57,7 @@ const FirmsSection: React.FC = () => {
   return (
 <section className="bg-white pb-40 rounded-t-2xl">
   <div className="container mx-auto px-6">
-    <h2 className="text-4xl font-bold text-center mb-12">Our Partner Firms</h2>
+    <h2 className="text-5xl font-bold text-center mb-12">Our Partner Firms</h2>
     
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
       {firms.map((firm) => (
@@ -76,7 +76,7 @@ const FirmsSection: React.FC = () => {
           />
 
           {/* Firm Details */}
-          <h3 className="text-xl font-semibold text-center mb-2">{firm.name}</h3>
+          <h3 className="text-2xl font-semibold text-center mb-2">{firm.name}</h3>
           {/* <p className="text-gray-700 text-center line-clamp-3">{firm.description}</p> */}
 
           {/* Website Link (Hidden initially, shows on hover) */}

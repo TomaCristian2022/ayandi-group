@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fonts: {
+        secondary: 'TheNeueBlack',
+        primary: 'Anthony'
+      },
       colors: {
         primary: '#E8E8E8',
         secondary: '#E8E8E8',

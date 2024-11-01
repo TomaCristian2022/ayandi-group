@@ -92,14 +92,14 @@ const Industries: React.FC = () => {
   return (
     <section className="bg-secondary py-20 industries-section">
       <div className="mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">Industries We Serve</h2>
+        <h2 className="text-5xl font-bold text-center mb-12">Industries We Serve</h2>
 
         {/* Auto-Scrolling Container */}
         <div
           className="relative flex items-center h-[400px] industries-container"
          
         >
-          <div className="flex items-center overflow-x-scroll h-fit space-x-6 industries-containers-section"
+          <div className="flex items-center overflow-x-scroll h-full space-x-6 industries-containers-section"
            ref={containerRef}
            onMouseEnter={handleMouseEnter}
            onMouseLeave={handleMouseLeave}
@@ -112,16 +112,16 @@ const Industries: React.FC = () => {
               >
                 {/* Left Side: Text */}
                 <div className="sm:w-2/3">
-                  <h4 className="text-xl font-semibold text-gray-800 mb-2 text-center">{industry.name}</h4>
-                  <p className="text-gray-600 text-justify">{industry.description}</p>
+                  <h4 className="text-2xl font-semibold text-gray-800 mb-2 text-center">{industry.name}</h4>
+                  <p className="text-gray-600 text-lg text-justify">{industry.description}</p>
                 </div>
                 
                 {/* Right Side: Image */}
-                <div className="sm:w-1/3 mt-0 sm:mt-0 top-0 absolute md: right-0">
+                <div className="mt-0 sm:mt-0 top-0 absolute md: right-0 h-full">
                   <img 
                     src={industry.image} 
                     alt={`${industry.name} Image`} 
-                    className="w-full h-48 object-cover rounded-full sm:rounded-r-full sm:rounded-l-none" 
+                    className="object-cover h-full rounded-full sm:rounded-r-full sm:rounded-l-none" 
                   />
                 </div>
               </div>

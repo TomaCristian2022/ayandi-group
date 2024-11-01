@@ -1,0 +1,14 @@
+/* In src/assets/fonts/fonts.css */
+@font-face {
+    font-family: 'TheNeueBlack';
+    src: url('assets/fonts/TheNeueBlack.woff') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Anthony';
+    src: url('assets/fonts/Anthony.woff') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  

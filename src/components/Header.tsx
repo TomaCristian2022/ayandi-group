@@ -28,8 +28,8 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-white font-bold text-2xl">Ayandi Group</h1>
-        <nav className="space-x-4">
+        <h1 className="text-white font-bold text-4xl">Ayandi Group</h1>
+        <nav className="space-x-4 text-2xl">
           <a href="#" className="text-white hover:underline">Our Impact</a>
           <a href="#" className="text-white hover:underline">Our Brands</a>
           <a href="#" className="text-white hover:underline">Our Story</a>
