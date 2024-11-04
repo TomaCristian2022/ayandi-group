@@ -89,25 +89,19 @@ const Industries: React.FC = () => {
     autoScroll();
   };
 
+
   return (
     <section className="bg-secondary py-20 industries-section">
-      <div className="mx-auto">
+      <div className="container mx-auto px-6">
         <h2 className="text-5xl font-bold text-center mb-12">Industries We Serve</h2>
 
-        {/* Auto-Scrolling Container */}
-        <div
-          className="relative flex items-center h-[400px] industries-container"
-         
-        >
-          <div className="flex items-center overflow-x-scroll h-full space-x-6 industries-containers-section"
-           ref={containerRef}
-           onMouseEnter={handleMouseEnter}
-           onMouseLeave={handleMouseLeave}
-           >
-            {industries.map(industry => (
-              <div 
-                key={industry.id} 
-                className="flex flex-col md:min-w-[800px] w-[800px] sm:flex-row items-center bg-white shadow-lg rounded-full 
+        {/* Desktop Auto-Scrolling Container */}
+        <div className="hidden md:flex relative items-center h-[400px] industries-container overflow-x-scroll" ref={containerRef}>
+          <div className="flex items-center h-full space-x-6 industries-containers-section">
+            {industries.map((industry) => (
+              <div
+                key={industry.id}
+                className="flex flex-col sm:min-w-[300px] md:min-w-[800px] w-[800px] sm:flex-row items-center bg-white shadow-lg rounded-full 
                 transition duration-500 hover:shadow-xl relative p-10"
               >
                 {/* Left Side: Text */}
@@ -117,7 +111,7 @@ const Industries: React.FC = () => {
                 </div>
                 
                 {/* Right Side: Image */}
-                <div className="mt-0 sm:mt-0 top-0 absolute md: right-0 h-full">
+                <div className="mt-0 sm:mt-0 top-0 absolute md:right-0 h-full">
                   <img 
                     src={industry.image} 
                     alt={`${industry.name} Image`} 
@@ -127,6 +121,22 @@ const Industries: React.FC = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Mobile Cards */}
+        <div className="md:hidden grid grid-cols-1 gap-6">
+          {industries.map((industry) => (
+            <div
+              key={industry.id}
+              className="bg-white shadow-lg rounded-lg overflow-hidden transition duration-500 hover:shadow-xl"
+            >
+              <img src={industry.image} alt={`${industry.name} Image`} className="w-full h-48 object-cover" />
+              <div className="p-6">
+                <h4 className="text-2xl font-semibold text-gray-800 mb-2 text-center">{industry.name}</h4>
+                <p className="text-gray-600 text-lg text-justify">{industry.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

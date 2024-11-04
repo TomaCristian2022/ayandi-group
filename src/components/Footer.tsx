@@ -4,11 +4,6 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 const Footer: React.FC = () => {
   return (
     <footer className="bg-black text-gray-400 py-10 relative">
-      
-      <div className="absolute top-[-100px] left-0 w-full overflow-hidden leading-[0]">
-                    <img className="h-[100px] w-[100%] object-cover" src="/assets/images/wave_black.svg" />
-            </div>
-
       <div className="container mx-auto px-6 md:px-12">
         {/* Footer Top */}
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left mb-6">
