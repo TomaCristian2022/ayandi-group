@@ -27,7 +27,7 @@ const ContactUs: React.FC = () => {
         </form>
       </div>
            
-      <div className="absolute  sm:-bottom-[100px] bottom-[0px] w-full overflow-hidden leading-[0]">
+      <div className="absolute  sm:-bottom-[100px] bottom-[-1px] w-full overflow-hidden leading-[0]">
             {/* <img className="h-[100px] w-[100%] object-cover" src="/assets/images/wave_black.svg" /> */}
           <svg className='' width="100vw" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#000000" d="M0,160 C720,60 720,260 1440,160 L1440,320 L0,320 Z"></path>

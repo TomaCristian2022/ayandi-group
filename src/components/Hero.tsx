@@ -55,7 +55,7 @@ const Hero2: React.FC = () => {
               <div className="absolute inset-0 bg-black opacity-30 z-0"></div>
 
             {/* Wave Divider */}
-            <div className="absolute bottom-[-500px] left-0 w-full overflow-hidden leading-[0]">
+            <div className="absolute bottom-[-516px] left-0 w-full overflow-hidden leading-[0]">
            
             <svg className="overflow-hidden" width="200vw" height="1200px" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#ffffff" d="M0,160 C720,60 720,260 1440,160 L1440,320 L0,320 Z"></path>
